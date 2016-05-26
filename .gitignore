@@ -1,0 +1,9 @@
+# COMPILED SOURCE #
+###################
+*.class
+Java/.metadata/*
+Java/.recommenders/*
+
+# OS JUNK #
+###########
+*Thumbs.db
