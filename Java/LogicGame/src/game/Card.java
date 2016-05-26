@@ -9,7 +9,7 @@ public class Card {
 	 */
 	private String suit;
 	private int rank;
-	private boolean[] show;
+	private boolean[] show = new boolean[4];
 	
 	/*
 	 * Card can be constructed by inputting suit ("S" or "D") and rank ([1,12])
@@ -46,7 +46,7 @@ public class Card {
 	 * returns String containing suit and rank if face up for player, else just the suit
 	 */
 	public String printCard(int player) {
-		if (player >= 4 || player < 1) {
+		if (player >= 4 || player < 0) {
 			return "Error";
 		}
 		if (show[player]) {

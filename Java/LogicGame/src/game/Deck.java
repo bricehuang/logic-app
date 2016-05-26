@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Deck {
 	
-	protected ArrayList<Card> deck;
+	protected ArrayList<Card> deck = new ArrayList<Card>();
 	
 	public Deck() {
 		
@@ -15,6 +15,13 @@ public class Deck {
 	 */
 	public Deck(ArrayList<Card> d) {
 		deck = d;
+	}
+	
+	/* 
+	 * returns ArrayList of cards in deck
+	 */
+	public ArrayList<Card> getDeck() {
+		return deck;
 	}
 	
 	/*
@@ -40,13 +47,6 @@ public class Deck {
 		return false;
 	}
 	
-	/* 
-	 * returns deck
-	 */
-	public ArrayList<Card> getDeck() {
-		return deck;
-	}
-	
 	/*
 	 * returns String containing the cards a player can see
 	 */
@@ -63,6 +63,23 @@ public class Deck {
 	 */
 	public int size() {
 		return deck.size();
+	}
+	
+	/*
+	 * h = ArrayList of hands
+	 * deals cards in deck to each of the hands in h (shuffle prior to dealing if want randomized)
+	 * returns true if h.size() > 0 and when done
+	 */
+	public boolean deal(ArrayList<Hand> h) {
+		if (h.size() == 0) {
+			return false;
+		}
+		int sizeOfDeck = size(); // sizeOfDeck = number of cards in deck
+		int numDecks = h.size(); // numDecks = number of decks dealing to
+		for (int i = 0; i < sizeOfDeck; i++) {
+			h.get(i%numDecks).addCard(deck.get(i));
+		}
+		return true;
 	}
 	
 	/*

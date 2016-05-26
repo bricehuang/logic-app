@@ -8,7 +8,23 @@ public class Player {
 	 * number = 0,1,2,3
 	 */
 	private int number;
-	private Deck deck;
+	private Hand hand;
+	
+	/*
+	 * num = the number (0,1,2,3) associated with the player
+	 */
+	public Player(int num) {
+		number = num;
+	}
+	
+	/*
+	 * num = the number (0,1,2,3) associated with the player
+	 * h = player's hand
+	 */
+	public Player(int num, Hand h) {
+		number = num;
+		hand = h;
+	}
 	
 	/*
 	 * returns number (0,1,2,3) associated with player
@@ -17,12 +33,24 @@ public class Player {
 		return number;
 	}
 	
-	public Deck getDeck() {
-		return deck;
+	/*
+	 * returns player's hand
+	 */
+	public Hand getHand() {
+		return hand;
 	}
 	
 	/*
-	 * returns index in deck of card that player wishes to show partner
+	 * h = hand of player
+	 * sets hand to h
+	 */
+	public boolean setHand(Hand h) {
+		hand = h;
+		return true;
+	}
+	
+	/*
+	 * returns index in hand of card that player wishes to show partner
 	 */
 	public int getMoveLogicPartner() {
 		Scanner scan = new Scanner(System.in);
