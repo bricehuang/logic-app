@@ -12,7 +12,11 @@ public class Card {
 	 */
 	private final String suit; 
 	private final int rank;
-	private boolean[] show = new boolean[4];    
+	private boolean[] show = new boolean[4];
+	/*
+	 * TODO maybe implement visibility control at the gameboard level instead of at the card
+	 * level? idk mutable cards make me queasy -Brice
+	*/
 	
 	/**
 	 * Constructs a Card of a given suit and rank
@@ -34,7 +38,7 @@ public class Card {
 	 * TODO is there a reason this method is boolean and allows inputs other than 
 	 * 0,1,2,3? To be consistent with printCard would it be better to make it void, 
 	 * document a precondition that player must be 0,1,2,3, and leave it up to whatever's
-	 * calling this method to enforce that player is 0,1,2,3?  
+	 * calling this method to enforce that player is 0,1,2,3? -Brice  
 	 */
 	/**
 	 * Mutator.  Makes a Card visible to a certain player.  
