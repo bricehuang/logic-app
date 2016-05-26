@@ -1,0 +1,23 @@
+package game;
+
+public class Player {
+	
+	/*
+	 * number = 0,1,2,3
+	 */
+	private int number;
+	private Deck deck;
+	
+	/*
+	 * returns number (0,1,2,3) associated with player
+	 */
+	public int getNumber() {
+		return number;
+	}
+	
+	public int getMovePartner() {
+		
+	}
+	
+	
+}

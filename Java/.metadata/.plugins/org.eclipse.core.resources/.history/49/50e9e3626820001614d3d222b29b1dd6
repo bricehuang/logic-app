@@ -1,0 +1,41 @@
+package game;
+
+public class Card {
+	
+	/* 
+	 * suit = "S" (spades) or "D" (diamonds) 
+	 * rank = 1, ..., 12
+	 * show = true if face up, false if face down (0,1,2,3 refer to different players)
+	 */
+	private String suit;
+	private int rank;
+	private boolean[] show;
+	
+	/*
+	 * Card can be constructed by inputting suit ("S" or "D") and rank ([1,12])
+	 * is face down for all four players
+	 */
+	public Card(String s, int r) {
+		if (s.equals("S") || s.equals("D")) {
+			suit = s;
+		}
+		if (1 <= r && r <= 12) {
+			rank = r;
+		}
+		show[0] = false;
+		show[1] = false;
+		show[2] = false;
+		show[3] = false;
+	}
+	
+	/*
+	 * player = 0, 1, 2, 3
+	 */
+	public String getCard(int player) {
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,45 @@
+package game;
+
+import java.util.*;
+
+public class Deck {
+	
+	ArrayList<Card> deck;
+	
+	/*
+	 * size = number of cards in deck
+	 */
+	public Deck(int size) {
+		
+	}
+	
+	/*
+	 * c = Card to be added to deck
+	 */
+	public boolean addCard(Card c) {
+		deck.add(c);
+		return true;
+	}
+	
+	public boolean sort() {
+		ArrayList<Card> newDeck = new ArrayList<Card>();
+		
+	}
+	
+	/*
+	 * tempDeck = ArrayList of Cards
+	 * returns lowest rank of all cards in tempDeck
+	 */
+	private int minRank(ArrayList<Card> tempDeck) {
+		int r = tempDeck.get(1).getRank();
+		for (Card c: tempDeck) {
+			if (c.getRank() < r) {
+				r = c.getRank();
+			}
+		}
+		return r;
+	}
+	
+	
+	
+}

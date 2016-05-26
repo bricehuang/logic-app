@@ -1,0 +1,18 @@
+package game;
+
+import java.util.*;
+
+public class Deck {
+	
+	ArrayList<Card> deck;
+	
+	/*
+	 * size = number of cards in deck
+	 */
+	public Deck(int size) {
+		deck = new Card[size];
+	}
+	
+	
+	
+}
