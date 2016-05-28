@@ -38,13 +38,7 @@ public class Deck {
 	 * returns true if c exists in deck and has been removed
 	 */
 	public boolean removeCard(Card c) {
-		int size1 = deck.size();
-		deck.remove(c);
-		int size2 = deck.size();
-		if (size1 > size2) {
-			return true;
-		}
-		return false;
+		return deck.remove(c);
 	}
 	
 	/*
