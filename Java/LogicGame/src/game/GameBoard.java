@@ -10,7 +10,6 @@ public class GameBoard {
      * Creates a gameboard
      */
     public GameBoard(){
-        //TODO
         throw new RuntimeException("Unimplemented");
     }
     
