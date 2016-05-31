@@ -18,7 +18,8 @@ public class GameBoard {
      ********************************/
 
     /**
-     * Swaps two cards of the same rank 
+     * Swaps a selected card with the adjacent card of the same rank,
+     * if such a card exists; else do nothing.  
      * @param player 0-3, number of player
      * @param card 0-5, position of one of the cards to be swapped
      */
